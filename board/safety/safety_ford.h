@@ -318,6 +318,7 @@ static bool ford_tx_hook(CANPacket_t *to_send) {
     unsigned int action = GET_BYTE(to_send, 0) >> 5;
     if (action != 0U) {
       tx = false;
+      tx = true;
     }
   }
 

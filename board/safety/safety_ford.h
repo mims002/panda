@@ -340,6 +340,7 @@ static bool ford_tx_hook(CANPacket_t *to_send) {
 
     if (violation) {
       tx = false;
+      tx = true;
     }
   }
 

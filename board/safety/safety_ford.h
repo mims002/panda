@@ -14,7 +14,7 @@
 #define FORD_IPMA_Data             0x3D8   // TX by OP, IPMA and LKAS user interface
 
 // CAN bus numbers.
-#define FORD_MAIN_BUS 0U
+#define FORD_MAIN_BUS 1U
 #define FORD_CAM_BUS  2U
 
 const CanMsg FORD_STOCK_TX_MSGS[] = {

@@ -23,6 +23,7 @@ const CanMsg FORD_STOCK_TX_MSGS[] = {
   {FORD_ACCDATA_3, 0, 8},
   {FORD_Lane_Assist_Data1, 0, 8},
   {FORD_LateralMotionControl, 0, 8},
+  {FORD_LateralMotionControl2, 1, 8},
   {FORD_IPMA_Data, 0, 8},
 };
 
@@ -33,6 +34,7 @@ const CanMsg FORD_LONG_TX_MSGS[] = {
   {FORD_ACCDATA_3, 0, 8},
   {FORD_Lane_Assist_Data1, 0, 8},
   {FORD_LateralMotionControl, 0, 8},
+  {FORD_LateralMotionControl2, 1, 8},
   {FORD_IPMA_Data, 0, 8},
 };
 
@@ -42,6 +44,7 @@ const CanMsg FORD_CANFD_STOCK_TX_MSGS[] = {
   {FORD_ACCDATA_3, 0, 8},
   {FORD_Lane_Assist_Data1, 0, 8},
   {FORD_LateralMotionControl2, 0, 8},
+  {FORD_LateralMotionControl2, 1, 8},
   {FORD_IPMA_Data, 0, 8},
 };
 
@@ -52,6 +55,7 @@ const CanMsg FORD_CANFD_LONG_TX_MSGS[] = {
   {FORD_ACCDATA_3, 0, 8},
   {FORD_Lane_Assist_Data1, 0, 8},
   {FORD_LateralMotionControl2, 0, 8},
+  {FORD_LateralMotionControl2, 1, 8},
   {FORD_IPMA_Data, 0, 8},
 };
 
@@ -360,7 +364,6 @@ static bool ford_tx_hook(CANPacket_t *to_send) {
 
     if (violation) {
       tx = false;
-      tx= true;
     }
   }
 

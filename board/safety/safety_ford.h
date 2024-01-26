@@ -202,7 +202,7 @@ const SteeringLimits FORD_STEERING_LIMITS = {
 };
 
 static void ford_rx_hook(CANPacket_t *to_push) {
-  if (GET_BUS(to_push) == FORD_MAIN_BUS || GET_BUS(to_push) == 1U) {
+  if (GET_BUS(to_push) == FORD_MAIN_BUS) {
     int addr = GET_ADDR(to_push);
 
     // Update in motion state from standstill signal

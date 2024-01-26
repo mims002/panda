@@ -14,7 +14,7 @@
 #define FORD_IPMA_Data             0x3D8   // TX by OP, IPMA and LKAS user interface
 
 // CAN bus numbers.
-#define FORD_MAIN_BUS 1U
+#define FORD_MAIN_BUS 0U
 #define FORD_CAM_BUS  2U
 
 const CanMsg FORD_STOCK_TX_MSGS[] = {
@@ -202,7 +202,7 @@ const SteeringLimits FORD_STEERING_LIMITS = {
 };
 
 static void ford_rx_hook(CANPacket_t *to_push) {
-  if (GET_BUS(to_push) == FORD_MAIN_BUS) {
+  if (GET_BUS(to_push) == FORD_MAIN_BUS || GET_BUS(to_push) == 1U) {
     int addr = GET_ADDR(to_push);
 
     // Update in motion state from standstill signal

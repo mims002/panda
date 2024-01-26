@@ -281,7 +281,7 @@ void generic_rx_checks(bool stock_ecu_detected) {
 
   // check if stock ECU is on bus broken by car harness
   if ((safety_mode_cnt > RELAY_TRNS_TIMEOUT) && stock_ecu_detected) {
-    relay_malfunction_set();
+    // relay_malfunction_set();
   }
 }
 

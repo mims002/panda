@@ -41,7 +41,7 @@ const CanMsg FORD_CANFD_STOCK_TX_MSGS[] = {
   {FORD_Steering_Data_FD1, 2, 8},
   {FORD_ACCDATA_3, 0, 8},
   {FORD_Lane_Assist_Data1, 0, 8},
-  {FORD_LateralMotionControl2, 0, 8},
+  {FORD_LateralMotionControl2, 1, 8},
   {FORD_IPMA_Data, 0, 8},
 };
 
@@ -51,7 +51,7 @@ const CanMsg FORD_CANFD_LONG_TX_MSGS[] = {
   {FORD_ACCDATA, 0, 8},
   {FORD_ACCDATA_3, 0, 8},
   {FORD_Lane_Assist_Data1, 0, 8},
-  {FORD_LateralMotionControl2, 0, 8},
+  {FORD_LateralMotionControl2, 1, 8},
   {FORD_IPMA_Data, 0, 8},
 };
 
@@ -147,7 +147,7 @@ const uint16_t FORD_PARAM_LONGITUDINAL = 1;
 const uint16_t FORD_PARAM_CANFD = 2;
 
 bool ford_longitudinal = false;
-bool ford_canfd = false;
+bool ford_canfd = true;
 
 const LongitudinalLimits FORD_LONG_LIMITS = {
   // acceleration cmd limits (used for brakes)
@@ -318,7 +318,6 @@ static bool ford_tx_hook(CANPacket_t *to_send) {
     unsigned int action = GET_BYTE(to_send, 0) >> 5;
     if (action != 0U) {
       tx = false;
-      tx = true;
     }
   }
 
@@ -340,7 +339,6 @@ static bool ford_tx_hook(CANPacket_t *to_send) {
 
     if (violation) {
       tx = false;
-      tx = true;
     }
   }
 

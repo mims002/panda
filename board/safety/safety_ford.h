@@ -147,7 +147,7 @@ const uint16_t FORD_PARAM_LONGITUDINAL = 1;
 const uint16_t FORD_PARAM_CANFD = 2;
 
 bool ford_longitudinal = false;
-bool ford_canfd = false;
+bool ford_canfd = true;
 
 const LongitudinalLimits FORD_LONG_LIMITS = {
   // acceleration cmd limits (used for brakes)

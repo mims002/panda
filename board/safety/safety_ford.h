@@ -22,7 +22,7 @@ const CanMsg FORD_STOCK_TX_MSGS[] = {
   {FORD_Steering_Data_FD1, 2, 8},
   {FORD_ACCDATA_3, 0, 8},
   {FORD_Lane_Assist_Data1, 0, 8},
-  {FORD_LateralMotionControl, 0, 8},
+  {FORD_LateralMotionControl, 1, 8},
   {FORD_IPMA_Data, 0, 8},
 };
 
@@ -32,7 +32,7 @@ const CanMsg FORD_LONG_TX_MSGS[] = {
   {FORD_ACCDATA, 0, 8},
   {FORD_ACCDATA_3, 0, 8},
   {FORD_Lane_Assist_Data1, 0, 8},
-  {FORD_LateralMotionControl, 0, 8},
+  {FORD_LateralMotionControl, 1, 8},
   {FORD_IPMA_Data, 0, 8},
 };
 
